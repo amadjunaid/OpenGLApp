@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{0510d0ca-38cc-4aa8-a893-d6cfc21a4b8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Terrain">
+      <UniqueIdentifier>{e2ab789a-2e01-43f2-a545-fe805d4d75e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Camera">
+      <UniqueIdentifier>{6366ca1c-2cef-454b-a3d5-ba064b806b04}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CommonUtils.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialLib.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MObject.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Param.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Plugin_Renderer.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLight.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneObject.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Threadable.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="TriangleMesh.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexAttributes.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Zone.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Core\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller_ArcBall.h">
+      <Filter>Core\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraController.h">
+      <Filter>Core\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller_Walker.h">
+      <Filter>Core\Camera</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CommonUtils.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialLib.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MObject.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Plugin_Renderer.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="PointLight.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneObject.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Threadable.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="TriangleMesh.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Zone.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Core\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller_ArcBall.cpp">
+      <Filter>Core\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraController.cpp">
+      <Filter>Core\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller_Walker.cpp">
+      <Filter>Core\Camera</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

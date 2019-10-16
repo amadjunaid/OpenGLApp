@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GUI</class>
+ <widget class="QMainWindow" name="GUI">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>661</width>
+    <height>637</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Mountain View</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="2">
+     <widget class="QGroupBox" name="toolBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>641</width>
+        <height>71</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Tool Box</string>
+      </property>
+      <widget class="QComboBox" name="combo_camController">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <item>
+        <property name="text">
+         <string>Walker</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Arcball</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>20</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Camera Controller</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="SceneLister" name="sceneLister">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>121</width>
+        <height>231</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>121</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::ExtendedSelection</enum>
+      </property>
+      <property name="rootIsDecorated">
+       <bool>true</bool>
+      </property>
+      <attribute name="headerVisible">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="headerCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Scene Lister</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="1" column="1" rowspan="2">
+     <widget class="ViewManager" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>519</width>
+        <height>419</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <widget class="ViewPort" name="renderView">
+       <property name="minimumSize">
+        <size>
+         <width>513</width>
+         <height>506</height>
+        </size>
+       </property>
+       <attribute name="title">
+        <string>Render View</string>
+       </attribute>
+       <zorder>toolBox</zorder>
+      </widget>
+      <widget class="QWidget" name="textureView">
+       <attribute name="title">
+        <string>Texture Editing</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QTreeWidget" name="materialLister">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>121</width>
+        <height>251</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>121</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <column>
+       <property name="text">
+        <string notr="true">1</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="MainMenu" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>661</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuImport">
+     <property name="title">
+      <string>Import</string>
+     </property>
+     <addaction name="action3D_Model"/>
+    </widget>
+    <widget class="QMenu" name="menuNew">
+     <property name="title">
+      <string>New</string>
+     </property>
+     <addaction name="actionTerrain"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="menuNew"/>
+    <addaction name="menuImport"/>
+   </widget>
+   <widget class="QMenu" name="menuRendering">
+    <property name="title">
+     <string>Rendering</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuObjects">
+    <property name="title">
+     <string>Objects</string>
+    </property>
+    <widget class="QMenu" name="menuAdd">
+     <property name="title">
+      <string>Add</string>
+     </property>
+     <addaction name="actionPoint_Light"/>
+    </widget>
+    <addaction name="menuAdd"/>
+   </widget>
+   <widget class="QMenu" name="menuCreate">
+    <property name="title">
+     <string>Create</string>
+    </property>
+    <addaction name="actionSample_Grid"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuCreate"/>
+   <addaction name="menuRendering"/>
+   <addaction name="menuObjects"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action3D_Model">
+   <property name="text">
+    <string>3D Model</string>
+   </property>
+  </action>
+  <action name="actionPoint_Light">
+   <property name="text">
+    <string>Point Light</string>
+   </property>
+  </action>
+  <action name="actionSampleData">
+   <property name="text">
+    <string>Create</string>
+   </property>
+  </action>
+  <action name="actionSample_Grid">
+   <property name="text">
+    <string>Sample Grid</string>
+   </property>
+  </action>
+  <action name="actionTerrain">
+   <property name="text">
+    <string>Terrain</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ViewPort</class>
+   <extends>QWidget</extends>
+   <header>viewport.h</header>
+   <container>1</container>
+   <slots>
+    <slot>refreshViewPort()</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>ViewManager</class>
+   <extends>QTabWidget</extends>
+   <header>viewmanager.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MainMenu</class>
+   <extends>QMenuBar</extends>
+   <header>MainMenu.h</header>
+   <slots>
+    <slot>on_Import_3DModel()</slot>
+    <slot>on_Create_PointLight()</slot>
+    <slot>on_Create_SampleData()</slot>
+    <slot>on_New_Terrain()</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>SceneLister</class>
+   <extends>QTreeWidget</extends>
+   <header>SceneLister.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>action3D_Model</sender>
+   <signal>triggered()</signal>
+   <receiver>menuBar</receiver>
+   <slot>on_Import_3DModel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>322</x>
+     <y>10</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionPoint_Light</sender>
+   <signal>triggered()</signal>
+   <receiver>menuBar</receiver>
+   <slot>on_Create_PointLight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>333</x>
+     <y>10</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSample_Grid</sender>
+   <signal>triggered()</signal>
+   <receiver>menuBar</receiver>
+   <slot>on_Create_SampleData()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>333</x>
+     <y>10</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionTerrain</sender>
+   <signal>triggered()</signal>
+   <receiver>menuBar</receiver>
+   <slot>on_New_Terrain()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>333</x>
+     <y>10</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>combo_camController</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>GUI</receiver>
+   <slot>on_camController()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>74</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>318</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_camController()</slot>
+ </slots>
+</ui>
