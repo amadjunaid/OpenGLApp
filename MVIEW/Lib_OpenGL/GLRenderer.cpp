@@ -41,7 +41,7 @@ namespace mview {
 
 		/****************************Drawing Data Initlization***********************/
 		gl_check_error();
-		std::string shaderFile = std::string(std::getenv("GLSHADERS_PATH"));
+		std::string shaderFile = std::string("..\\Shaders\\Opengl\\");
 		
 		//shaderFile += "LightingShader.glsl";
 		shaderFile += "SimpleShader.glsl";
