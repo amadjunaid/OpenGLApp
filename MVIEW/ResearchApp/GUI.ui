@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>661</width>
+    <width>664</width>
     <height>637</height>
    </rect>
   </property>
@@ -52,12 +52,12 @@
        </property>
        <item>
         <property name="text">
-         <string>Walker</string>
+         <string>Arcball</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Arcball</string>
+         <string>Walker</string>
         </property>
        </item>
       </widget>
@@ -145,7 +145,6 @@
        <attribute name="title">
         <string>Render View</string>
        </attribute>
-       <zorder>toolBox</zorder>
       </widget>
       <widget class="QWidget" name="textureView">
        <attribute name="title">
@@ -188,7 +187,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>661</width>
+     <width>664</width>
      <height>21</height>
     </rect>
    </property>

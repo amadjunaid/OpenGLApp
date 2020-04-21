@@ -82,8 +82,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(GLM_PATH);$(SolutionDir)Lib_Common;$(SolutionDir)Lib_OpenGL;$(GLFW_PATH)include;$(GLEW_PATH)Include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <LibraryPath>$(GLFW_PATH)lib-vc2015\;$(GLEW_PATH)lib\Release\x64\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>..\..\Externals\assimp\Include;..\..\Externals\GLFW\include;..\..\Externals\glm\;$(SolutionDir)Lib_Common;$(SolutionDir)Lib_OpenGL;..\..\Externals\glew-2.1.0\Include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>..\..\Externals\GLFW\lib-vc2017\;..\..\Externals\glew-2.1.0\lib\Release\x64\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

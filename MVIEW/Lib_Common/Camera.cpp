@@ -30,8 +30,8 @@ namespace mview {
 
 		m_combinedViewMat.reset(new Param_mat4(*m_viewMat, CAMERA_VIEW, nullptr));
 
-		//m_viewController.reset(new mview::Controller_ArcBall(m_viewMat, m_combinedViewMat));
-		m_viewController.reset(new mview::Controller_Walker(m_viewMat, m_combinedViewMat));
+		m_viewController.reset(new mview::Controller_ArcBall(m_viewMat, m_combinedViewMat));
+		//m_viewController.reset(new mview::Controller_Walker(m_viewMat, m_combinedViewMat));
 		m_paramList.push_back(m_combinedViewMat);
 		m_paramList.push_back(m_projMat);
 	}

@@ -178,7 +178,7 @@ int ViewPort::getMViewKey(int qtKey)
 }
 
 void ViewPort::wheelEvent(QWheelEvent* event) {
-	float numDegrees = (float)event->delta() / 8.f;
+	float numDegrees = -1.f*(float)event->delta() / 8.f;
 	mview::SceneManager::getCam()->Zoom(numDegrees, width(), height());
 	//mview::SceneManager::ChangeData(mview::SceneManager::getCam()->m_id, mview::PARAM_NAME::CAMERA_PROJ);
 }

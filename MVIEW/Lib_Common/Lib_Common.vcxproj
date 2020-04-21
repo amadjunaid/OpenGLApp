@@ -133,8 +133,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(STB_PATH);$(ASSIMP_PATH)include;$(GLM_PATH);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(ASSIMP_PATH)lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>..\..\Externals\stb_image;..\..\Externals\assimp\include;..\..\Externals\glm\;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>..\..\Externals\Assimp\lib\x64;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseD|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -147,7 +147,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseD|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(THREADEDQUEUES_PATH)readerwriterqueue\;$(STB_PATH);$(ASSIMP_PATH)include;$(GLM_PATH);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <LibraryPath>$(ASSIMP_PATH)lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <LibraryPath>..\..\Externals\Assimp\lib\x64;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

@@ -113,8 +113,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(STB_PATH);$(ASSIMP_PATH)Include;$(GLFW_PATH)include;$(SolutionDir)Lib_Common;$(GLM_PATH);$(GLEW_PATH)Include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(GLFW_PATH)lib-vc2015\;$(GLEW_PATH)lib\Release\x64\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <IncludePath>..\..\Externals\stb_image;..\..\Externals\assimp\Include;$(SolutionDir)Lib_Common;..\..\Externals\GLFW\include;..\..\Externals\glm\;..\..\Externals\glew-2.1.0\Include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>..\..\Externals\GLFW\lib-vc2017\;..\..\Externals\glew-2.1.0\lib\Release\x64\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseD|x64'">
     <LinkIncremental>true</LinkIncremental>
