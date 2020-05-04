@@ -13,8 +13,8 @@ namespace mview
 
 	//Struct to load info for other UBOs e.g. count etc.. elements should match the order in UBOType
 	struct UBOInfoData {
-		int numPointLights = 0;
-		int numMaterials = 0;
+		size_t numPointLights = 0;
+		size_t numMaterials = 0;
 	};
 
 	//************
@@ -32,7 +32,7 @@ namespace mview
 		GLuint m_bpi = 0;
 		GLuint m_ubo = 0;
 		bool m_isBound = false;
-		void BindToShader(shrd_GLShaderTechnique shader, const int& index);
+		void BindToShader(shrd_GLShaderTechnique shader, const size_t& index);
 		void BindToShaderNonIndexed(shrd_GLShaderTechnique shader);
 		
 		GLUBOResource();

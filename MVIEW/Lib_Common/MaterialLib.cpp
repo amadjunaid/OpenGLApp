@@ -8,13 +8,13 @@ namespace mview {
 		m_materials.push_back(shrd_Material(new Material()));
 	}
 
-	int MaterialLib::AddMaterials(const shrd_Material mat)
+	size_t MaterialLib::AddMaterials(const shrd_Material mat)
 	{
 		m_materials.push_back(mat);
 		return m_materials.size() - 1;
 	}
 
-	int MaterialLib::AddMaterialFrom_MtlFile(const std::string& filePath, const std::string& MtlName)
+	size_t MaterialLib::AddMaterialFrom_MtlFile(const std::string& filePath, const std::string& MtlName)
 	{
 		FILE * file = fopen(filePath.c_str(), "r");
 
@@ -115,7 +115,7 @@ namespace mview {
 		m_materials.erase(m_materials.begin() + idx);
 	}
 
-	const shrd_Material MaterialLib::GetMaterial(int idx)
+	const shrd_Material MaterialLib::GetMaterial(size_t idx)
 	{
 		if(idx<m_materials.size())
 			return m_materials.at(idx);

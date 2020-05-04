@@ -83,11 +83,11 @@ namespace mview {
 			shrd_Model model = std::static_pointer_cast<Model>(object);
 			
 			//Important: Materials should be contigously populated for set of meshes belonging to 1 model so that they are removed correctly
-			for (int i = 0; i < model->getTriMeshes().size(); i++) {
+			for (size_t i = 0; i < model->getTriMeshes().size(); i++) {
 				shrd_GLTriangleMesh glTriMesh(new GLTriangleMesh(model->getTriMeshes()[i], model->m_id, model->getPose()));
 				m_glSceneData->glTriMeshList.push_back(glTriMesh);
 				
-				for (int j = 0; j < TEXTURE_TYPE::TT_COUNT; j++)
+				for (size_t j = 0; j < TEXTURE_TYPE::TT_COUNT; j++)
 				{
 					if (model->getTriMeshes()[i]->m_textureIDs[j]) {
 						glTriMesh->m_textures[j] = shrd_GLTexture(new GLTexture(model->getTriMeshes()[i]->m_textureIDs[j], model->GetTexLib()));						
@@ -248,8 +248,8 @@ namespace mview {
 
 				if (itr != m_glSceneData->glTriMeshList.end())
 				{
-					materialIndices.push_back(itr->get()->m_materialndex);
-					removedMeshIndices.push_back(itr - m_glSceneData->glTriMeshList.begin());					
+					materialIndices.push_back((int)itr->get()->m_materialndex);
+					removedMeshIndices.push_back((int)(itr - m_glSceneData->glTriMeshList.begin()));					
 					m_glSceneData->glTriMeshList.erase(itr);
 				}
 				
@@ -334,10 +334,10 @@ namespace mview {
 	}
 
 	//To be called on addition or deletion of a Shader UBO Resource
-	void GLRenderer::RefreshUBOCount(const UBOType& type, const int& count)
+	void GLRenderer::RefreshUBOCount(const UBOType& type, const size_t& count)
 	{
-		int* info = &(m_uboInfoData.numPointLights);
-		info[(int)type] = count;
+		size_t* info = &(m_uboInfoData.numPointLights);
+		info[(size_t)type] = count;
 		glBindBuffer(GL_UNIFORM_BUFFER, m_ubo_InfoUBO);
 		glBufferData(GL_UNIFORM_BUFFER, sizeof(m_uboInfoData), &m_uboInfoData, GL_DYNAMIC_DRAW);
 		gl_check_error();

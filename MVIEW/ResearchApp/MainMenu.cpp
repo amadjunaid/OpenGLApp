@@ -51,38 +51,18 @@ void MainMenu::on_Create_SampleData()
 	SceneLister* sceneLister = ((GUI*)(this->parent()))->getSceneLister();
 	sceneLister->clear();
 
-	//mview::shrd_PointLight pointLight(new mview::PointLight());	
+	std::string filename = "../../Data/nanosuit/nanosuit.obj";
+	if (!filename.empty()) {
+		mview::shrd_Model model(new mview::Model());
+		model->LoadFromFile(filename);
 
-	////Add to scene
-	//mview::SceneManager::AddObject(pointLight);
+		//Add toscene
+		mview::SceneManager::AddObject(model);
 
-	////Add to GUI list
-
-	//sceneLister->AddItem(SceneListerType::LIGHTS, pointLight);
-
-	//QString filename = "../Data/fishOBJ/BlenderOBJ.obj";
-	//if (!filename.isNull()) {
-	//	mview::shrd_Model triMesh = std::make_shared<mview::Model>();
-	//	triMesh->LoadFromFile(filename.toStdString());		
-
-	//	//Add t oscene
-	//	mview::SceneManager::AddObject(triMesh);
-
-	//	//Add to GUI list
-	//	sceneLister = ((GUI*)(this->parent()))->getSceneLister();
-	//	sceneLister->AddItem(SceneListerType::MODEL, triMesh);
-	//}	
-
-	//mview::shrd_Zone zone(new mview::Zone());
-
-	////Add to scene
-	//mview::SceneManager::AddObject(zone);
-
-	////Add to GUI list
-
-	//TODO: add to UI list
-	//sceneLister->AddItem(SceneListerType::ZONE, zone);
-
+		//Add to GUI list
+		SceneLister* sceneLister = ((GUI*)(this->parent()))->getSceneLister();
+		sceneLister->AddItem(SceneListerType::MODEL, model);
+	}
 }
 
 void MainMenu::on_Create_PointLight()

@@ -16,7 +16,7 @@ namespace mview {
 
 		size_t m_numVertices = 0;
 		size_t m_numTris = 0;
-		int m_materialID = 0;
+		size_t m_materialID = 0;
 		std::vector<int> m_textureIDs;
 		std::string m_objectName;
 		std::vector<VertexAttribute> m_vertices;

@@ -39,11 +39,11 @@ namespace mview
 		std::vector<shrd_Material> m_materials;
 	public:
 		MaterialLib();
-		int AddMaterials(const shrd_Material mat);
-		int AddMaterialFrom_MtlFile(const std::string& filePath, const std::string& MtlName);
+		size_t AddMaterials(const shrd_Material mat);
+		size_t AddMaterialFrom_MtlFile(const std::string& filePath, const std::string& MtlName);
 		bool ReadMaterial(FILE* file, shrd_Material& mat);
 		void DeleteMaterial(int idx);
-		const shrd_Material GetMaterial(int idx);
+		const shrd_Material GetMaterial(size_t idx);
 		~MaterialLib();
 	};
 

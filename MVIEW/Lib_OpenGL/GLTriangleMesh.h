@@ -29,7 +29,7 @@ namespace mview {
 		shrd_Param_T<RENDER_MODE> m_renderMode;
 		//shrd_SceneObject m_sceneObject;
 		shrd_mat4 m_modelTransform;	
-		int m_materialndex = 0;
+		size_t m_materialndex = 0;
 		GLTexturesList m_textures;
 		//GLTriangleMesh();
 		GLTriangleMesh(shrd_TriangleMesh triMesh, longInt globalId, shrd_mat4 modelTrasform);		

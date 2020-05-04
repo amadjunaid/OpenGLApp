@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="shaders">
-      <UniqueIdentifier>{276744b3-6e22-4327-a786-356b2944eabb}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GLError.h">
@@ -26,9 +23,6 @@
     </ClInclude>
     <ClInclude Include="GLTriangleMesh.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="shaders\SimpleShader.glsl">
-      <Filter>shaders</Filter>
     </ClInclude>
     <ClInclude Include="GLShader.h">
       <Filter>Header Files</Filter>
@@ -104,16 +98,5 @@
     <ClCompile Include="GLTerrain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="shaders\GridShader.glsl">
-      <Filter>shaders</Filter>
-    </None>
-    <None Include="shaders\LightingShader.glsl">
-      <Filter>shaders</Filter>
-    </None>
-    <None Include="shaders\Common.glsl">
-      <Filter>shaders</Filter>
-    </None>
   </ItemGroup>
 </Project>

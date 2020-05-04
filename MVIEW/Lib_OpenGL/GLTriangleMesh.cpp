@@ -54,7 +54,7 @@ namespace mview {
 		glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &(*m_modelTransform)[0][0]);
 
 		GLuint materialID = glGetUniformLocation(shader->m_id, "materialID");
-		glUniform1i(materialID, m_materialndex);	
+		glUniform1i(materialID, (GLint)m_materialndex);	
 
 
 		//Configure attribute buffers

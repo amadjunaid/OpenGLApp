@@ -257,7 +257,7 @@
   </action>
   <action name="actionSample_Grid">
    <property name="text">
-    <string>Sample Grid</string>
+    <string>Sample Data</string>
    </property>
   </action>
   <action name="actionTerrain">

@@ -135,11 +135,11 @@ namespace mview {
 				}
 				triMesh->m_materialID = m_matLib->AddMaterials(mat);
 								
-				for (int i = 0; i < TEXTURE_TYPE::TT_COUNT; i++) {
+				for (size_t i = 0; i < TEXTURE_TYPE::TT_COUNT; i++) {
 					for (size_t i = 0; i < ai_material->GetTextureCount(GetAssimpTextureType(TEXTURE_TYPE(i))); i++)
 					{
 						aiString texFile;
-						if (AI_SUCCESS == ai_material->GetTexture(GetAssimpTextureType(TEXTURE_TYPE(i)), i, &texFile))
+						if (AI_SUCCESS == ai_material->GetTexture(GetAssimpTextureType(TEXTURE_TYPE(i)), (int)i, &texFile))
 							triMesh->m_textureIDs[i] = m_texLib->AddTexture(TEXTURE_TYPE(i), std::string(texFile.C_Str()), m_path);
 					}					
 				}

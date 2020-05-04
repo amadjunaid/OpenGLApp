@@ -25,7 +25,7 @@ namespace mview
 		SetTerrainCoordinates();
 
 		//Create mesh vertices
-		int i, j, index, index1, index2, index3, index4;
+		int i, j, index1, index2, index3, index4;
 
 
 		// Calculate the number of vertices in the 3D terrain model.

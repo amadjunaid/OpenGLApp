@@ -6,7 +6,7 @@ namespace mview
 {
 	GLuint GLUBOResource::m_countBPI = UBOInfoData_BPI+1; //Zero is reserved for the UBO Info struct
 
-	void GLUBOResource::BindToShader(shrd_GLShaderTechnique shader, const int & index)
+	void GLUBOResource::BindToShader(shrd_GLShaderTechnique shader, const size_t & index)
 	{
 		std::string IndexedName = m_UBONameInShader + "[" + std::to_string(index) + "]";
 		unsigned int blockIndex = glGetUniformBlockIndex(shader->m_id, IndexedName.c_str());

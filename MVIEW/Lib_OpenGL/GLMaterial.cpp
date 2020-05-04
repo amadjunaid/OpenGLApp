@@ -3,7 +3,7 @@
 namespace mview
 {
 
-	GLMaterial::GLMaterial(int matID, const shrd_MaterialLib matLib, const std::vector<int>& texIDs): GLUBOResource()
+	GLMaterial::GLMaterial(size_t matID, const shrd_MaterialLib matLib, const std::vector<int>& texIDs): GLUBOResource()
 	{
 		g_matID = matID;
 		const shrd_Material mat = matLib->GetMaterial(g_matID);

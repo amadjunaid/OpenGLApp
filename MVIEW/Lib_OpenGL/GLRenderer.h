@@ -67,7 +67,7 @@ namespace mview {
 		bool ReplaceSceneData(const shrd_MObject object);
 		void ChangeSceneDataParam(const shrd_MObject object, int param);
 		bool RemoveSceneData(const shrd_MObject object);
-		void RefreshUBOCount(const UBOType& type, const int& count);
+		void RefreshUBOCount(const UBOType& type, const size_t& count);
 
 		void Draw(const longInt& frameNumber, uchar* renderedData);		
 		void OnShow();

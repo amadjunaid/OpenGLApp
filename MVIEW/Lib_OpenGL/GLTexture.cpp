@@ -59,9 +59,9 @@ namespace mview {
 	bool GLTexture::loadBMP(const std::string& imagepath)
 	{
 		// Data read from the header of the BMP file
-		unsigned char header[54]; // Each BMP file begins by a 54-bytes header		
-		unsigned int dataPos; // Position in the file where the actual data begins
-		unsigned int imageSize; // = width*height*3
+		//unsigned char header[54]; // Each BMP file begins by a 54-bytes header		
+		//unsigned int dataPos; // Position in the file where the actual data begins
+		//unsigned int imageSize; // = width*height*3
 
 		//FILE * file = fopen(imagepath.c_str(), "rb");
 		//if (!file) { Logger::Message(LOG_ERROR, "Cannot open texture file: " + imagepath); return false; }
@@ -141,7 +141,7 @@ namespace mview {
 
 		/* get the surface desc */
 		fread(&header, 124, 1, fp);
-		int m_width, m_height, m_channels;
+		int m_width, m_height;
 		m_height = *(unsigned int*)&(header[8]);
 		m_width = *(unsigned int*)&(header[12]);
 		unsigned int linearSize = *(unsigned int*)&(header[16]);

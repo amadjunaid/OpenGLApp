@@ -37,9 +37,9 @@ namespace mview
 		}m_UBOData;
 
 	public:
-		int g_matID;
+		size_t g_matID;
 		shrd_MaterialLib g_matLib;
-		GLMaterial(int matID, const shrd_MaterialLib, const std::vector<int>& texIDs);
+		GLMaterial(size_t matID, const shrd_MaterialLib, const std::vector<int>& texIDs);
 		~GLMaterial();
 		void UpdateParam(int param);
 	};
