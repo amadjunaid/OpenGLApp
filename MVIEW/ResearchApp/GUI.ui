@@ -257,12 +257,17 @@
   </action>
   <action name="actionSample_Grid">
    <property name="text">
-    <string>Sample Data</string>
+    <string>Sample 3D Scene</string>
    </property>
   </action>
   <action name="actionTerrain">
    <property name="text">
     <string>Terrain</string>
+   </property>
+  </action>
+  <action name="actionSample_3d_Scene">
+   <property name="text">
+    <string>Sample 3d Scene</string>
    </property>
   </action>
  </widget>

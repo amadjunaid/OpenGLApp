@@ -17,8 +17,7 @@ public slots :
 	void on_Import_3DModel();
 	void on_Create_PointLight();
 	void on_Create_SampleData();
-	void on_New_Terrain();
-	
+	void on_New_Terrain();	
 };
 
 #endif // MAINMENU_H

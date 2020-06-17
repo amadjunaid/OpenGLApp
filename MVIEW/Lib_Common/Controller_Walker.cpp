@@ -17,7 +17,8 @@ namespace mview
 		m_leftTurnSpeed = 0.0f;
 		m_rightTurnSpeed = 0.0f;
 		m_lookUpSpeed = 0.0f;
-		m_lookDownSpeed = 0.0f;		
+		m_lookDownSpeed = 0.0f;	
+		SetCombinedViewMat();
 	}
 
 
@@ -32,6 +33,7 @@ namespace mview
 
 	void Controller_Walker::MouseClick(const BUTTON& btn, const int& cx, const int& cy)
 	{
+		//TODO: Fix erratic mouse movement
 		if (isDragging) {
 			switch (btn)
 			{

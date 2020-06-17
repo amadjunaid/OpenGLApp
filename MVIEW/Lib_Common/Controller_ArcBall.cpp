@@ -102,7 +102,7 @@ namespace mview {
 	// reset the arcball
 	void Controller_ArcBall::Reset()
 	{
-				
+		SetCombinedViewMat();				
 	}
 
 	// begin arcball rotation
